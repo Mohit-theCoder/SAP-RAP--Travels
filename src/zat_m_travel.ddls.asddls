@@ -10,8 +10,22 @@ define root view entity ZAT_M_Travel
   association of one to one I_Currency               as _Currency      on $projection.CurrencyCode = _Currency.Currency
   association of one to one /DMO/I_Overall_Status_VH as _OverallStatus on $projection.OverallStatus = _OverallStatus.OverallStatus
 {
+
+      @ObjectModel.text.element: [ 'Description' ]
   key travel_id                                                    as TravelId,
+      @Consumption.valueHelpDefinition: [{
+        entity: {
+            name: '/DMO/I_Agency',
+            element: 'AgencyID'
+        }
+      }]
       agency_id                                                    as AgencyId,
+      @Consumption.valueHelpDefinition: [{
+      entity: {
+        name: '/DMO/I_Customer',
+        element: 'CustomerID'
+      }
+      }]
       customer_id                                                  as CustomerId,
       begin_date                                                   as BeginDate,
       end_date                                                     as EndDate,
@@ -19,8 +33,21 @@ define root view entity ZAT_M_Travel
       booking_fee                                                  as BookingFee,
       @Semantics.amount.currencyCode: 'CurrencyCode'
       total_price                                                  as TotalPrice,
+      @Consumption.valueHelpDefinition: [{
+      entity: {
+        name: 'I_Currency',
+        element: 'Currency'
+      }
+      }]
       currency_code                                                as CurrencyCode,
       description                                                  as Description,
+      @Consumption.valueHelpDefinition: [{
+      entity: {
+        name: '/DMO/I_Overall_Status_VH',
+        element: 'OverallStatus'
+      }
+      }]
+      @ObjectModel.text.element: [ 'statusText' ]
       overall_status                                               as OverallStatus,
       case overall_status
       when 'O' then 2
