@@ -1,5 +1,5 @@
-@EndUserText.label: 'Travel Service Definition'
-define service Zats_M_Travel_SD {
+@EndUserText.label: 'Service Def Travel'
+define service ZSD_Travel_N {
   expose ZAT_M_TRAVEL_P           as Travel;
   expose ZATS_M_BOOKING_P         as Booking;
   expose ZATS_M_BOOKSUPPL_P       as BookingSuppliment;
