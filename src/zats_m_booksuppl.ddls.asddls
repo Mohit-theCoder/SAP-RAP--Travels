@@ -8,7 +8,7 @@ define view entity ZATS_M_Booksuppl as select from /dmo/booksuppl_m
 association to parent ZATS_M_BOOKING as _Booking
     on $projection.TravelId = _Booking.TravelId and
        $projection.BookingId = _Booking.BookingId
-association[1..1] to ZATS_AB_TRAVEL as _Travel 
+association[1..1] to ZAT_M_Travel as _Travel 
     on $projection.TravelId = _Travel.TravelId
 association[1..1] to /DMO/I_Supplement as _Supplement 
     on $projection.SupplementId = _Supplement.SupplementID

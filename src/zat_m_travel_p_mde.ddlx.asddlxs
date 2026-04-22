@@ -1,0 +1,32 @@
+@Metadata.layer: #CORE
+annotate entity ZAT_M_TRAVEL_P with
+{
+  @UI.lineItem: [{ position: 10 }]
+  TravelId;
+  @UI.lineItem: [{ position: 20 }]
+  AgencyId;
+  @UI.lineItem: [{ position: 30 }]
+  CustomerId;
+  @UI.lineItem: [{ position: 40 }]
+  BeginDate;
+  @UI.lineItem: [{ position: 50 }]
+  EndDate;
+  @UI.lineItem: [{ position: 60 }]
+  BookingFee;
+  @UI.lineItem: [{ position: 70 }]
+  TotalPrice;
+  @UI.lineItem: [{ position: 80 }]
+  CurrencyCode;
+  @UI.lineItem: [{ position: 90 }]
+  Description;
+  @UI.lineItem: [{ position: 10, importance: #HIGH, criticality: 'Minion'}]
+  OverallStatus;
+  //    Minion;
+  //    statusText;
+  //    CreatedBy;
+  //    CreatedAt;
+  //    LastChangedBy;
+  //    LastChangedAt;
+
+
+}

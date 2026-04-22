@@ -1,0 +1,28 @@
+@Metadata.layer: #CORE
+annotate entity ZATS_M_BOOKING_P with
+{
+
+  //    TravelId;
+  @UI.lineItem: [{ position: 10 }]
+  BookingId;
+  @UI.lineItem: [{ position: 10 }]
+  BookingDate;
+  @UI.lineItem: [{ position: 20 }]
+  CustomerId;
+  @UI.lineItem: [{ position: 30 }]
+  CarrierId;
+  @UI.lineItem: [{ position: 40 }]
+  ConnectionId;
+  @UI.lineItem: [{ position: 50 }]
+  FlightDate;
+  @UI.lineItem: [{ position: 60 }]
+  FlightPrice;
+  @UI.lineItem: [{ position: 70 }]
+  CurrencyCode;
+  @UI.lineItem: [{ position: 80 }]
+  BookingStatus;
+  @UI.lineItem: [{ position: 90 }]
+  LastChangedAt;
+
+
+}
